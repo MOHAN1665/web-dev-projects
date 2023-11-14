@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/alphardex/aqua.css@master/dist/aqua.min.css">
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Blog</h1>
+    </header>
+
+	<input type="text" id="searchInput" placeholder="Search posts...">
+	<button class="search-button" onclick="searchPosts()">Search</button>
+    
+    <!-- Form to Create a New Post -->
+    <section class="create-post">
+        <h2>Create a New Post</h2>
+        <form id="createPostForm">
+            <input type="text" id="title" placeholder="Title">
+            <textarea id="content" placeholder="Content"></textarea>
+            <button type="submit">Create Post</button>
+        </form>
+    </section>
+    
+    <!-- Container to Display Posts -->
+    <section id="posts" class="post-container"></section>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>
