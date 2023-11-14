@@ -1,0 +1,216 @@
+/* Reset default margin and padding */
+body,
+h1,
+h2,
+p {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.create-post {
+    background-color: #fff;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.create-post:hover {
+    transform: scale(1.03);
+}
+
+.create-post input[type="text"],
+.create-post textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.create-post button {
+    padding: 8px 12px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.create-post button:hover {
+    background-color: #555;
+}
+
+.post-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: grid;
+    gap: 20px;
+}
+
+.post-container > div {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.post-container > div:hover {
+    transform: translateY(-5px);
+}
+
+.post-container h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.post-container p {
+    color: #666;
+    margin-bottom: 20px;
+}
+.action-button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Button hover effect */
+.action-button:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+/* ... your other styles */
+
+/* Styling for search bar */
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#searchInput {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: width 0.4s ease-in-out;
+}
+
+.search-button {
+    padding: 8px 16px;
+    background-color: #3498db;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Search bar hover effect */
+#searchInput:hover {
+    border-color: #3498db;
+}
+
+/* Search button hover effect */
+.search-button:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+.loading-spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -20px; /* Half of the height */
+    margin-left: -20px; /* Half of the width */
+    display: none;
+}
+
+/* Animation for spinner */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.btn{
+	padding:8px 20px;
+	width:200px;
+	height:50px;
+	color:#fff;
+	font-weight:700;
+	border-radius:0;
+	text-transform:uppercase;
+	margin:25px;
+	overflow:hidden;
+	position:relative;
+}
+.btn::before{
+	content:"";
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background:linear-gradient(120deg,transparent,
+		#00fffc,transparent);
+	transform:translateX(-100%)
+	transition:0.6s;
+	position:absolute;
+}
+.btn:hover{
+	background:transparent;	
+	box-shadow:0 0 20px 5px #00fffc;
+}
+.btn:hover::before{
+	transform:translateX(100%);
+}
+
+.btn:nth-child(2){
+	border:1px solid #e819ef;
+}
+.btn:nth-child(2)::before{
+	background:linear-gradient(120deg, transparent,#e819ef, transparent);
+}
+.btn:nth-child(2):hover{
+	box-shadow:0 0 20px 5px $e819ef;
+}
+
+
+.btn:nth-child(3){
+	border:1px solid #67dc1e;
+}
+.btn:nth-child(3)::before{
+	background:linear-gradient(120deg, transparent,#67dc1e, transparent);
+}
+.btn:nth-child(3):hover{
+	box-shadow:0 0 20px 5px $67dc1e;
+}
+
