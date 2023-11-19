@@ -1,0 +1,29 @@
+Expense Tracker Web Application
+
+Overview:
+The Expense Tracker web application is designed to help users efficiently manage and track their expenses. It provides a user-friendly interface to input, store, and visualize various expenses, aiding in better financial management.
+
+Features:
+
+Expense Entry: Users can add new expenses with details such as name, amount, and date.
+Expense Visualization: View a comprehensive list of entered expenses with essential details like expense name, amount, and date.
+Sorting Options: Sort expenses by date or amount to facilitate easier analysis.
+Total Calculation: Automatically calculates and displays the total sum of all expenses entered.
+Responsive Design: The application is optimized for various devices, ensuring a seamless experience across desktops, tablets, and mobile phones.
+Technology Stack:
+
+Frontend: HTML, CSS, JavaScript
+Backend: Node.js, Express.js
+Database: MongoDB
+Deployment: Hosted on a server or cloud platform
+Usage Instructions:
+
+Clone the repository to your local machine.
+Install necessary dependencies using npm or yarn.
+Set up MongoDB and configure the connection.
+Run the application using npm start or a similar command.
+Access the application through a web browser.
+Enter expense details, view, sort, and manage expenses efficiently.
+
+Contributions:
+Contributions and enhancements to the Expense Tracker application are welcome! Feel free to fork the repository, make improvements, and create pull requests.
