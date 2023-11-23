@@ -1,0 +1,26 @@
+IncomeExpenseTracker Web Application
+Description
+The IncomeExpenseTracker is an intuitive web application designed to simplify and streamline expense and income tracking. It provides a user-friendly interface to manage expenses and incomes, enabling users to efficiently monitor their financial transactions.
+
+Steps to Use
+1. Adding an Expense or Income
+Enter the transaction name, select a category, and input the transaction amount.
+Click the respective "Add Expense" or "Add Income" button to record the transaction.
+2. Updating Transactions
+Modify the transaction details by clicking on the entry.
+Update the transaction name and amount in the provided form.
+Save the changes using the "Update" button.
+3. Deleting Transactions
+Select the transaction to delete.
+Confirm the deletion by clicking the "Delete" button.
+4. Sorting Transactions
+Use the "Sort by Amount" or "Sort by Date" buttons to organize transactions for better insights.
+Process
+Input Section: Provides forms to add, update, or delete transactions.
+Transaction List: Displays a comprehensive list of transactions with names, amounts, and categories.
+Transaction Category: Offers a predefined category list for expense and income management.
+Sorting Functionality: Facilitates the sorting of transactions by amount or date.
+Technologies Used
+Front-End: HTML, CSS, JavaScript
+Back-End: Node.js, Express.js
+Database: MongoDB
