@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Expense Tracker</h1>
+
+    <div class="select-option">
+      <input type="radio" id="expense-option" name="entry-option" value="expense" checked>
+      <label for="expense-option">Expense</label>
+
+      <input type="radio" id="income-option" name="entry-option" value="income">
+      <label for="income-option">Income</label>
+    </div>
+    
+
+    <form id="entry-form">
+      <div id="expense-fields" style="display: none;">
+        <input type="text" id="expenses-name" placeholder="Expense Name">
+        <input type="number" id="expenses-amount" placeholder="Amount">
+        <input type="date" id="expenses-date">
+      </div>
+
+      <div id="income-fields" style="display: none;">
+        <!-- This should match the names used in your JavaScript fetch call -->
+        <input type="text" id="income-name" name="incomeName" placeholder="Income Name">
+        <input type="number" id="income-amount" name="incomeAmount" placeholder="Amount">
+        <input type="date" id="income-date" name="incomeDate" placeholder="Date">
+      </div>
+
+      <button type="submit">Add Entry</button>
+    </form>
+
+    <div class="filter-options">
+      <button class="bubbly-button" id="sort-date-btn">Sort by Date</button>
+      <button class="bubbly-button" id="sort-amount-btn">Sort by Amount</button>
+    </div>
+
+    <!-- Tables to display entries -->
+    <div class="entry-table">
+      <h2>Entries</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Amount</th>
+            <th>Date</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="entry-list"></tbody>
+      </table>
+    </div>
+
+    <!-- Total amount -->
+    <div class="total-amount">
+      <strong>Total:</strong>
+      <span id="total-amount">$0.00</span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
