@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Summarization Web App</title>
+
+    <!-- Bootstrap CSS (you can use a CDN or download it and host it locally) -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    
+    <style>
+        body {
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        .container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-top: 50px;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        #summary-container {
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="mt-4 mb-4">Text Summarization Web App</h1>
+        
+        <div class="row">
+            <div class="col-md-6">
+                <form id="summarize-form">
+                    <div class="form-group">
+                        <label for="text">Enter text to summarize:</label>
+                        <textarea id="text" name="text" rows="10" class="form-control" required></textarea>
+                    </div>
+                    <button type="button" id="summarize-btn" class="btn btn-primary">Summarize</button>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <div id="summary-container">
+                    <h2 class="mt-4">Summary:</h2>
+                    <p id="summary"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#summarize-btn').click(function() {
+                var inputText = $('#text').val();
+                $.ajax({
+                    type: 'POST',
+                    url: '/summarize',
+                    data: { text: inputText },
+                    success: function(response) {
+                        $('#summary').text(response.summary);
+                        $('#summary-container').slideDown();
+                    },
+                    error: function(error) {
+                        console.log(error);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
